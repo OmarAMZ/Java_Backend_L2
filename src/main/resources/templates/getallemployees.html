@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Java Backend L2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <center>
+        <div class="col-xs-8 col-md-8">
+            <h3>
+                <a href="/principal" class="btn">Return Menu</a>
+            </h3>
+            <h2>Employee List</h2>
+            <div class="table-responsive">
+                <table class="table" id="product-table">
+                    <thead>
+                        <tr>
+                            <th>Name Complete</th>
+                            <th>Name Complete</th>
+                            <th>TaxIdNumber(RFC)</th>
+                            <th>Email</th>
+                            <th>ContractType Name</th>
+                            <th>Contract DateFrom</th>
+                            <th>Contract DateTo</th>
+                            <th>Salary Per Day</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="employee : ${employees}">
+                            <td><a th:text="${employee.TaxtIdNumber}"></a></td>
+                            <td th:text="${employee.Name}"></td>
+                            <td th:text="${employee.LastName}"></td>
+                            <td th:text="${employee.BirthDate}"></td>
+                            <td th:text="${employee.Email}"></td>
+                            <td th:text="${employee.Cellphone}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </center>
+</body>
+</html>
